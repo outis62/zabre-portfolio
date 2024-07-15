@@ -26,10 +26,16 @@ const Stairs = () => {
   {/* commentaire */}
   {[...Array(8)].map((_, index)=>{
     return(
-        <motion.div key={index} variants={stairAnimation} initial="initial" animate="animate" exit="exit" transition={{
-            duration: 0.4,
-            ease: "easeOut",
-            delay: reverseIndex(index) * 0.1,
+        <motion.div 
+            key={index} 
+            variants={stairAnimation} 
+            initial="initial" 
+            animate="animate" 
+            exit="exit" 
+            transition={{
+                duration: 0.4,
+                ease: "easeOut",
+                delay: reverseIndex(index) * 0.1,
         }} 
         className="h-full w-full bg-white relative"
         />

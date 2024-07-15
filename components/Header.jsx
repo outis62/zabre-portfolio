@@ -13,6 +13,7 @@ const Header = () => {
                     Zabre<span className="text-accent">.</span>
                 </h1>
             </Link>
+            
             {/* desktop nav & hire me button */}
 
             <div className="hidden xl:flex items-center gap-8">
