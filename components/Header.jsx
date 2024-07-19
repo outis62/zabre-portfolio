@@ -7,7 +7,7 @@ import MobileNav from "./MobileNav"
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
-        <div className="containerr mx-auto flex justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center">
             <Link href="/">
                 <h1 className="text-4xl font-semibold">
                     Zabre<span className="text-accent">.</span>
@@ -25,7 +25,7 @@ const Header = () => {
             </Link>
             </div>
 
-            {/* mobile nav */}
+            {/* mobile nav */} 
             <div className="xl:hidden">
                 <MobileNav />
             </div>
