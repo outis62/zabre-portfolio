@@ -72,17 +72,18 @@ const Contact = () => {
               </Select>
               {/* textarea */}
               <Textarea className="h-[200px]" placeholder="Tape your message here."/>
-              <Button size="md" className="max-w-40 ">Send message</Button>
+              <Button size="md" className="max-w-45 hover:text-white/80">Send message</Button>
             </form>
           </div>
           {/* info */}
+          
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
           <ul className="flex flex-col gap-10">
             {info.map((item, index)=>{
-              return (
+              return (  
                 <li key={index} className="flex items-center gap-6">
                   <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
-                  <div className="tex-[28px]">
+                  <div className="text-[28px]">
                     {item.icon}
                   </div>
                   <div className="flex-1">
