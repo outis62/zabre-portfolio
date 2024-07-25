@@ -1,7 +1,7 @@
 "use client"
 
-import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaLaravel, FaPhp, FaPython} from 'react-icons/fa'
-import {SiTailwindcss, SiNextdotjs, SiLivewire } from 'react-icons/si'
+import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaLaravel, FaPhp, FaPython, FaWordpress, FaJoomla, FaDrupal} from 'react-icons/fa'
+import {SiTailwindcss, SiNextdotjs, SiLivewire, SiOdoo } from 'react-icons/si'
 import {DiDjango} from 'react-icons/di'
 
 const about = {
@@ -148,6 +148,22 @@ const skills = {
     {
       icon: <DiDjango/>,
       name:"django",
+    },
+    {
+      icon: <FaWordpress />,
+      name: "wordpress",
+    },
+    {
+      icon: <FaJoomla />,
+      name: "joomla",
+    },
+    {
+      icon: <FaDrupal />,
+      name: "drupal",
+    },
+    {
+      icon: <SiOdoo />,
+      name: "odoo",
     }
   ]
 }
