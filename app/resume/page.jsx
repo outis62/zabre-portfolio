@@ -1,7 +1,7 @@
 "use client"
 
 import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaLaravel, FaPhp, FaPython, FaWordpress, FaJoomla, FaDrupal} from 'react-icons/fa'
-import {SiTailwindcss, SiNextdotjs, SiLivewire, SiOdoo } from 'react-icons/si'
+import {SiTailwindcss, SiNextdotjs, SiLivewire, SiOdoo, SiMysql, SiTypescript } from 'react-icons/si'
 import {DiDjango} from 'react-icons/di'
 
 const about = {
@@ -130,6 +130,10 @@ const skills = {
       name: "node.js",
     },
     {
+      icon: <SiMysql />,
+      name: "mysql",
+    },
+    {
       icon: <FaLaravel/>,
       name: "laravel",
     },
@@ -144,6 +148,10 @@ const skills = {
     {
       icon: <FaPython />,
       name:"python",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
     },
     {
       icon: <DiDjango/>,
