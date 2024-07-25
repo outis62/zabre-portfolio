@@ -1,7 +1,8 @@
 "use client"
 
-import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaLaravel} from 'react-icons/fa'
+import {FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap, FaNodeJs, FaLaravel, FaPhp, FaPython} from 'react-icons/fa'
 import {SiTailwindcss, SiNextdotjs, SiLivewire } from 'react-icons/si'
+import {DiDjango} from 'react-icons/di'
 
 const about = {
   title: "About me",
@@ -136,6 +137,18 @@ const skills = {
       icon: <FaBootstrap/>,
       name: "bootstrap",
     },
+    {
+      icon: <FaPhp />,
+      name:"php",
+    },
+    {
+      icon: <FaPython />,
+      name:"python",
+    },
+    {
+      icon: <DiDjango/>,
+      name:"django",
+    }
   ]
 }
 
@@ -143,6 +156,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { motion } from 'framer-motion'
+import { icons } from 'lucide-react'
 
 const Resume = () => {
   return (
