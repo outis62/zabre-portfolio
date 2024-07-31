@@ -21,9 +21,9 @@ const projects = [
     title:"project 1",
     Description: "venenatis ipsum dolor, risus. massa vel vestibulum adipiscing adipiscing luctus.",
     stack:[{name:"Html 5"}, {name:"Css 3"}, {name:"Javascript"}],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github:"",
+    image: "/assets/work/main-web-lws.png",
+    live: "https://legrandwebservices.com/",
+    github:"https://github.com/Legrand-WEB-Services/main-website",
   },
   {
     num: "02",
@@ -32,8 +32,8 @@ const projects = [
     Description: "venenatis ipsum dolor, risus. massa vel vestibulum adipiscing adipiscing luctus.",
     stack:[{name:"Laravel"}, {name:"Bootstrap.css"}, {name:"MySql"}],
     image: "/assets/work/thumb2.png",
-    live: "",
-    github:"",
+    live: "https://gsh.switch-maker.net/",
+    github:"https://github.com/outis62",
   },
   {
     num: "03",
@@ -42,8 +42,18 @@ const projects = [
     Description: "venenatis ipsum dolor, risus. massa vel vestibulum adipiscing adipiscing luctus.",
     stack:[{name:"Next.js"}, {name:"Tailwind.css"}, {name:"Node.js"}],
     image: "/assets/work/thumb3.png",
+    live: "https://zabre-portfolio.vercel.app",
+    github:"https://github.com/outis62/zabre-portfolio",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    title:"project 4",
+    Description: "venenatis ipsum dolor, risus. massa vel vestibulum adipiscing adipiscing luctus.",
+    stack:[{name:"Laravel"}, {name:"Livewire"}, {name:"MySql"}, {name:"Bootstrap"}],
+    image: "/assets/work/thumb5.png",
     live: "",
-    github:"",
+    github:"https://github.com/outis62/Gestion-univ-livewire",
   },
 ]
 
