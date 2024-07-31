@@ -41,7 +41,7 @@ const projects = [
     title:"project 3",
     Description: "venenatis ipsum dolor, risus. massa vel vestibulum adipiscing adipiscing luctus.",
     stack:[{name:"Next.js"}, {name:"Tailwind.css"}, {name:"Node.js"}],
-    image: "/assets/work/thumb3.png",
+    image: "/assets/work/thumb7.png",
     live: "https://zabre-portfolio.vercel.app",
     github:"https://github.com/outis62/zabre-portfolio",
   },
