@@ -31,7 +31,7 @@ const projects = [
     title:"project 2",
     Description: "venenatis ipsum dolor, risus. massa vel vestibulum adipiscing adipiscing luctus.",
     stack:[{name:"Laravel"}, {name:"Bootstrap.css"}, {name:"MySql"}],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/work/thumb6.png",
     live: "https://gsh.switch-maker.net/",
     github:"https://github.com/outis62",
   },
