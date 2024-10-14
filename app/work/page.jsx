@@ -56,14 +56,24 @@ const projects = [
     github:"https://github.com/outis62/Gestion-univ-livewire",
   },
   {
-    num: "04",
+    num: "05",
     category: "fullstack",
     title:"project 5",
     Description: "Site web de la fondation Y2MA",
     stack:[{name:"Wordpress"}, {name:"MySql"},],
     image: "/assets/work/thumb8.png",
-    live: "",
-    github:"",
+    live: "https://fondationy2ma.com/",
+    github:"https://fondationy2ma.com/",
+  },
+  {
+    num: "056",
+    category: "fullstack",
+    title:"project 56",
+    Description: "Site web de SAD Architecture",
+    stack:[{name:"Wordpress"}, {name:"MySql"},],
+    image: "/assets/work/thumb9.png",
+    live: "https://sadarchitecture.com/",
+    github:"https://sadarchitecture.com/",
   },
 ]
 
