@@ -66,7 +66,7 @@ const projects = [
     github:"https://fondationy2ma.com/",
   },
   {
-    num: "056",
+    num: "06",
     category: "fullstack",
     title:"project 56",
     Description: "Site web de SAD Architecture",
