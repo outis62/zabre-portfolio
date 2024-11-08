@@ -6,7 +6,7 @@ import {DiDjango} from 'react-icons/di'
 
 const about = {
   title: "About me",
-  description: "quis quis ipsum et ut fringilla. Maecenas Lorem Donec ipsum In",
+  description: "Passionate about technology and innovation, I specialize in web and mobile development, network systems engineering, and digital marketing. With a strong background in delivering tailored solutions and optimizing digital strategies, I am dedicated to creating seamless user experiences and driving business growth through cutting-edge technologies. Always eager to learn and adapt, I thrive in dynamic environments and aim to continuously improve my skills to meet the challenges of the ever-evolving tech landscape.",
   info:[
     {
       fieldName: "Name",
@@ -34,7 +34,7 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My experience',
-  description: 'Nullam libero Maecenas mauris tristique. sollicitudin vel tellus laoreet dolor ',
+  description: 'Over 2 years of hands-on experience in web & mobile development, network systems engineering, and digital marketing, driving impactful solutions and measurable results.',
   items:[
     {
       company: "Legrand Web Services",
@@ -95,7 +95,7 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "vestibulum risus. ut luctus. Lorem dignissim consectetur vel auctor vestibulum",
+  description: "Versatile expertise in web & mobile development, network systems engineering, and digital marketing strategies.",
   skilllist: [
     {
       icon: <FaHtml5/>,

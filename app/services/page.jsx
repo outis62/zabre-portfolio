@@ -7,19 +7,19 @@ const services = [
   {
     num: '01',
     title: 'Web & mobile developper',
-    Description: 'Lorum ipsum laoreet mauris Morbi sit diam.',
+    Description: 'Creative and tech-driven web & mobile developer focused on building powerful, user-centered digital solutions.',
     href:""
   },
   {
     num: '02',
-    title: 'Network system ingeneer',
-    Description: 'Lorum ipsum laoreet mauris Morbi sit diam.',
+    title: 'Network & informatique system ingeneer',
+    Description: 'Innovative Network System Engineer specializing in secure, high-performance network design and management.',
     href:""
   },
   {
     num: '03',
     title: 'Digital marketing',
-    Description: 'Lorum ipsum laoreet mauris Morbi sit diam.',
+    Description: 'Creative digital marketer driving growth through data-driven strategies and impactful online campaigns.',
     href:""
   },
   {
