@@ -67,7 +67,7 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My education',
-  description: 'Nullam libero Maecenas mauris tristique. sollicitudin vel tellus laoreet dolor ',
+  description: 'My education has equipped me with the foundational knowledge and skills in, view my skills. I hold a degree in Licence 3 from Aube Nouvelle University (Ex: ISIG), where I gained a strong understanding of software & hardware development, network systems. My commitment to continuous learning allows me to stay updated with the latest industry trends and advancements',
   items:[
     {
       institution: "Simplon Burkina faso",
