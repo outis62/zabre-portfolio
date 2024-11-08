@@ -51,10 +51,10 @@ const Contact = () => {
               <p className="text-white/60">Let&apos;s work together to bring your ideas to life. Whether you&apos;re looking to build a powerful website, optimize your digital strategy, or implement innovative solutions, I&apos;m here to collaborate and help you achieve your goals. Let&apos;s create something amazing together!</p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="First name"/>
-                <Input type="lastname" placeholder="Last name"/>
-                <Input type="email" placeholder="Email address"/>
-                <Input type="phone" placeholder="Phone number"/>
+                <Input type="firstname" name="firstname" placeholder="First name"/>
+                <Input type="lastname" name="lastname" placeholder="Last name"/>
+                <Input type="email" name="email" placeholder="Email address"/>
+                <Input type="phone" name="phone" placeholder="Phone number"/>
               </div>
               {/* select */}
               <Select>
@@ -72,7 +72,7 @@ const Contact = () => {
               </Select>
               {/* textarea */}
               <Textarea className="h-[200px]" placeholder="Tape your message here."/>
-              <Button size="md" className="max-w-45 hover:text-white/80">Send message</Button>
+              <Button size="md" className="max-w-45 hover:text-white/80">Send message &#10230;</Button>
             </form>
           </div>
           {/* info */}
