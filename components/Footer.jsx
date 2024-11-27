@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="flex justify-between items-center mt-12 text-[10px] border-t-2 py-4">
         <span className="flex">
           Copyright 2024 &copy; Built by&nbsp;
-          <a href="" target="_blank">
+          <a href="javascript:void(0);" target="_blank">
             YTech
           </a>
         </span>
