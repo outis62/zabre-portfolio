@@ -24,9 +24,9 @@ const services = [
   },
   {
     num: '04',
-    title: 'Web developper',
-    Description: 'Lorum ipsum laoreet mauris Morbi sit diam.',
-    href:""
+    title: 'Web developer',
+    Description: 'Experienced web developer delivering responsive, high-quality websites and applications tailored to business needs, with a focus on performance and user experience.',
+    href: ""
   },
 ]
 
