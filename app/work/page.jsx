@@ -16,7 +16,7 @@ import WorkSliderBtns from "@/components/WorkSliderBtns"
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Frontend",
     title:"project 1",
     Description: "Site web Legrand Web Services.",
     stack:[{name:"Html 5"}, {name:"Css 3"}, {name:"Javascript"}],
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Web site",
     title:"project 2",
     Description: "Site de financements participatif",
     stack:[{name:"Laravel"}, {name:"Bootstrap.css"}, {name:"MySql"}],
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     num: "03",
-    category: "fullstack",
+    category: "Web site",
     title:"project 3",
     Description: "Portfolio",
     stack:[{name:"Next.js"}, {name:"Tailwind.css"}, {name:"Node.js"}],
@@ -46,17 +46,17 @@ const projects = [
   },
   {
     num: "04",
-    category: "fullstack",
+    category: "Web site",
     title:"project 4",
     Description: "Plateforme de gestion scolaire et universitaire",
     stack:[{name:"Laravel"}, {name:"Livewire"}, {name:"MySql"}, {name:"Bootstrap"}],
-    image: "/assets/work/thumb5.png",
+    image: "/assets/work/thumb11.png",
     live: "",
     github:"https://github.com/outis62/Gestion-univ-livewire",
   },
   {
     num: "05",
-    category: "fullstack",
+    category: "Web site",
     title:"project 5",
     Description: "Site web de la fondation Y2MA",
     stack:[{name:"Wordpress"}, {name:"MySql"},],
@@ -66,7 +66,7 @@ const projects = [
   },
   {
     num: "06",
-    category: "fullstack",
+    category: "Web site",
     title:"project 56",
     Description: "Site web de SAD Architecture",
     stack:[{name:"Wordpress"}, {name:"MySql"},],
@@ -74,13 +74,62 @@ const projects = [
     live: "https://sadarchitecture.com/",
     github:"https://sadarchitecture.com/",
   },
+   {
+    num: "07",
+    category: "Web site fullstack",
+    title:"project 56",
+    Description: "Site web de jvo global investments",
+    stack:[{name:"Wordpress"}, {name:"MySql"},],
+    image: "/assets/work/thumb11.png",
+    live: "https://jvoglobal.com/",
+    github:"https://jvoglobal.com/",
+  },
+   {
+    num: "08",
+    category: "Web site fullstack",
+    title:"project 56",
+    Description: "Site web de Verduxe",
+    stack:[{name:"Wordpress"}, {name:"MySql"},],
+    image: "/assets/work/thumb11.png",
+    live: "https://verduxe.com/",
+    github:"https://verduxe.com/",
+  },
+   {
+    num: "09",
+    category: "Web site fullstack",
+    title:"project 56",
+    Description: "Site web de westago",
+    stack:[{name:"Wordpress"}, {name:"MySql"},{name:"Nextjs"}, {name:"Laravel"}],
+    image: "/assets/work/thumb11.png",
+    live: "https://westago.com/",
+    github:"https://westago.com/",
+  },
+   {
+    num: "10",
+    category: "Mobile Track application",
+    title:"project 56",
+    Description: "Application mobile manitese PFNL-PUBW",
+    stack:[{name:"React native"}, {name:"Laravel"},],
+    image: "/assets/work/thumb10.png",
+    live: "https://play.google.com/store/apps/details?id=com.legrand_web_services.manitese&hl=en-US",
+    github:"https://play.google.com/store/apps/details?id=com.legrand_web_services.manitese&hl=en-US",
+  },
+    {
+    num: "11",
+    category: "Mobile dating application",
+    title:"project 56",
+    Description: "Application mobile YESIFAN",
+    stack:[{name:"React native"}, ],
+    image: "/assets/work/thumb10.png",
+    live: "#",
+    github:"#",
+  },
 ]
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
 const handleSlideChange = (swiper) =>{
-  // get current slide index
   const currentIndex = swiper.activeIndex;
   // update project state based on current slide index
   setProject(projects[currentIndex]);
@@ -99,7 +148,7 @@ const handleSlideChange = (swiper) =>{
                 {/* outline num */}
                 <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
                 {/* project category */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} </h2>
                 {/* projet description */}
                 <p className="text-white/60">{project.Description}</p>
                 {/* stack */}
