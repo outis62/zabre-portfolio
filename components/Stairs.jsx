@@ -20,7 +20,6 @@ const reverseIndex = (index) => {
 const Stairs = () => {
   return (
     <>
-      {/* commentaire */}
       {[...Array(8)].map((_, index) => {
         return (
           <motion.div
