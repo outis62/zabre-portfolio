@@ -54,7 +54,6 @@ export async function POST(req) {
 
     await transporter.sendMail(adminMailOptions);
 
-    // --- Auto-reply vers le visiteur ---
     const userMailOptions = {
       from: `"Zabré Boureima" <${process.env.GMAIL_USER}>`,
       to: email,
