@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-
-
-const EMAILJS_SERVICE_ID         = "service_hz7l3lb";
-const EMAILJS_TEMPLATE_ID        = "template_1qjy16r";
-const EMAILJS_AUTOREPLY_TEMPLATE = "template_08pdeb4"; 
-const EMAILJS_PUBLIC_KEY         = "m4qmPTBwNORsd5IXJ";
 
 const info = [
   { icon: <FaPhoneAlt />, title: "Phone", description: "(+226) 74352563 / 62694878" },
@@ -41,38 +34,24 @@ export default function Contact() {
     e.preventDefault();
     if (!form.firstname || !form.email || !form.message) return;
     setStatus("sending");
+
     try {
-      await Promise.all([
-        // 1. Notification → toi
-        emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          {
-            from_firstname: form.firstname,
-            from_lastname:  form.lastname,
-            from_email:     form.email,
-            from_phone:     form.phone,
-            service:        form.service || "Not specified",
-            message:        form.message,
-            reply_to:       form.email,
-          },
-          EMAILJS_PUBLIC_KEY
-        ),
-        // 2. Auto-reply → visiteur
-        emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_AUTOREPLY_TEMPLATE,
-          {
-            from_firstname: form.firstname,
-            from_email:     form.email,
-          },
-          EMAILJS_PUBLIC_KEY
-        ),
-      ]);
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Unknown error");
+      }
 
       setStatus("success");
       setForm(INITIAL_FORM);
-    } catch {
+    } catch (err) {
+      console.error("Contact form error:", err);
       setStatus("error");
     }
   };
