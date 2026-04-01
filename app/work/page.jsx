@@ -2,18 +2,12 @@
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+  Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
@@ -22,120 +16,109 @@ const projects = [
   {
     num: "01",
     category: "Frontend",
-    title: "project 1",
-    Description: "Site web Legrand Web Services.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    title: "Legrand Web Services",
+    description: "Site web vitrine de l'agence Legrand Web Services.",
+    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
     image: "/assets/work/main-web-lws.png",
     live: "https://legrandwebservices.com/",
     github: "https://legrandwebservices.com",
   },
   {
     num: "02",
-    category: "Web site",
-    title: "project 2",
-    Description: "Site de financements participatif",
-    stack: [{ name: "Laravel" }, { name: "Bootstrap.css" }, { name: "MySql" }],
+    category: "Web App",
+    title: "GSH Financement",
+    description: "Plateforme de financement participatif.",
+    stack: [{ name: "Laravel" }, { name: "Bootstrap" }, { name: "MySQL" }],
     image: "/assets/work/thumb6.png",
     live: "https://gsh.switch-maker.net/",
     github: "https://gsh.switch-maker.net/",
   },
   {
     num: "03",
-    category: "Web site",
-    title: "project 3",
-    Description: "Portfolio",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    category: "Portfolio",
+    title: "Zabre Portfolio",
+    description: "Portfolio personnel Next.js.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Node.js" }],
     image: "/assets/work/thumb7.png",
     live: "https://zabre-portfolio.vercel.app",
     github: "https://github.com/outis62/zabre-portfolio",
   },
   {
     num: "04",
-    category: "Web site",
-    title: "project 4",
-    Description: "Plateforme de gestion scolaire et universitaire",
-    stack: [
-      { name: "Laravel" },
-      { name: "Livewire" },
-      { name: "MySql" },
-      { name: "Bootstrap" },
-    ],
+    category: "Web App",
+    title: "Gestion Universitaire",
+    description: "Plateforme de gestion scolaire et universitaire.",
+    stack: [{ name: "Laravel" }, { name: "Livewire" }, { name: "MySQL" }, { name: "Bootstrap" }],
     image: "/assets/work/thumb11.png",
     live: "",
     github: "https://github.com/outis62/Gestion-univ-livewire",
   },
   {
     num: "05",
-    category: "Web site",
-    title: "project 5",
-    Description: "Site web de la fondation Y2MA",
-    stack: [{ name: "Wordpress" }, { name: "MySql" }],
+    category: "WordPress",
+    title: "Fondation Y2MA",
+    description: "Site web de la fondation Y2MA.",
+    stack: [{ name: "WordPress" }, { name: "MySQL" }],
     image: "/assets/work/thumb8.png",
     live: "https://fondationy2ma.com/",
     github: "https://fondationy2ma.com/",
   },
   {
     num: "06",
-    category: "Web site",
-    title: "project 56",
-    Description: "Site web de SAD Architecture",
-    stack: [{ name: "Wordpress" }, { name: "MySql" }],
+    category: "WordPress",
+    title: "SAD Architecture",
+    description: "Site web de SAD Architecture.",
+    stack: [{ name: "WordPress" }, { name: "MySQL" }],
     image: "/assets/work/thumb9.png",
     live: "https://sadarchitecture.com/",
     github: "https://sadarchitecture.com/",
   },
   {
     num: "07",
-    category: "Web site fullstack",
-    title: "project 56",
-    Description: "Site web de jvo global investments",
-    stack: [{ name: "Wordpress" }, { name: "MySql" }],
+    category: "Fullstack",
+    title: "JVO Global Investments",
+    description: "Site web de JVO Global Investments.",
+    stack: [{ name: "WordPress" }, { name: "MySQL" }],
     image: "/assets/work/thumb11.png",
     live: "https://jvoglobal.com/",
     github: "https://jvoglobal.com/",
   },
   {
     num: "08",
-    category: "Web site fullstack",
-    title: "project 56",
-    Description: "Site web de Verduxe",
-    stack: [{ name: "Wordpress" }, { name: "MySql" }],
+    category: "Fullstack",
+    title: "Verduxe",
+    description: "Site web de Verduxe.",
+    stack: [{ name: "WordPress" }, { name: "MySQL" }],
     image: "/assets/work/thumb11.png",
     live: "https://verduxe.com/",
     github: "https://verduxe.com/",
   },
   {
     num: "09",
-    category: "Web site fullstack",
-    title: "project 56",
-    Description: "Site web de westago",
-    stack: [
-      { name: "Wordpress" },
-      { name: "MySql" },
-      { name: "Nextjs" },
-      { name: "Laravel" },
-    ],
+    category: "Fullstack",
+    title: "Westago",
+    description: "Site web de Westago.",
+    stack: [{ name: "WordPress" }, { name: "Next.js" }, { name: "Laravel" }],
     image: "/assets/work/thumb11.png",
     live: "https://westago.com/",
     github: "https://westago.com/",
   },
   {
     num: "10",
-    category: "Mobile Track application",
-    title: "project 56",
-    Description: "Application mobile manitese PFNL-PUBW",
-    stack: [{ name: "React native" }, { name: "Laravel" }],
+    category: "Mobile App",
+    title: "Manitese PFNL",
+    description: "Application mobile de suivi PFNL-PUBW.",
+    stack: [{ name: "React Native" }, { name: "Laravel" }],
     image: "/assets/work/thumb10.png",
     live: "https://play.google.com/store/apps/details?id=com.legrand_web_services.manitese&hl=en-US",
-    github:
-      "https://play.google.com/store/apps/details?id=com.legrand_web_services.manitese&hl=en-US",
+    github: "https://play.google.com/store/apps/details?id=com.legrand_web_services.manitese&hl=en-US",
   },
   {
     num: "11",
-    category: "Mobile dating application",
-    title: "project 56",
-    Description: "Application mobile YESIFAN",
-    stack: [{ name: "React native" }],
+    category: "Mobile App",
+    title: "YESIFAN",
+    description: "Application mobile de rencontres YESIFAN.",
+    stack: [{ name: "React Native" }],
     image: "/assets/work/thumb10.png",
     live: "#",
     github: "#",
@@ -144,104 +127,374 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex;
-    setProject(projects[currentIndex]);
+    setImgLoaded(false);
+    setProject(projects[swiper.activeIndex]);
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
-    >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+        .work-root {
+          --accent: #e8c97e;
+          --accent-dim: rgba(232,201,126,0.10);
+          --accent-border: rgba(232,201,126,0.28);
+          --surface: #1c1c20;
+          --surface-2: #232328;
+          --surface-3: #2a2a30;
+          --border: rgba(255,255,255,0.07);
+          --text: #f0ede8;
+          --text-muted: rgba(240,237,232,0.45);
+          --text-dim: rgba(240,237,232,0.65);
+          font-family: 'DM Sans', sans-serif;
+          color: var(--text);
+          background: var(--surface);
+          min-height: 100vh;
+          padding: 4rem 1.5rem;
+        }
+
+        .work-inner {
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+
+        /* ── Header ── */
+        .work-header {
+          margin-bottom: 3rem;
+        }
+
+        .work-eyebrow {
+          font-size: 0.7rem;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 0.5rem;
+        }
+
+        .work-title {
+          font-family: 'DM Serif Display', serif;
+          font-size: clamp(2rem, 5vw, 3rem);
+          font-weight: 400;
+          line-height: 1.1;
+          margin: 0 0 0.75rem;
+        }
+
+        .work-title em { font-style: italic; color: var(--accent); }
+
+        /* ── Layout ── */
+        .work-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3.5rem;
+          align-items: center;
+        }
+
+        @media (max-width: 860px) {
+          .work-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+          .work-info-col { order: 2; }
+          .work-slider-col { order: 1; width: 100%; }
+        }
+
+        /* ── Info column ── */
+        .work-info-col {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .work-num {
+          font-family: 'DM Serif Display', serif;
+          font-size: 5rem;
+          line-height: 1;
+          font-weight: 400;
+          color: transparent;
+          -webkit-text-stroke: 1px rgba(240,237,232,0.15);
+          transition: -webkit-text-stroke-color 0.4s;
+        }
+
+        .work-num.accent-stroke {
+          -webkit-text-stroke-color: rgba(232,201,126,0.4);
+        }
+
+        .work-category {
+          display: inline-block;
+          font-size: 0.7rem;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: var(--accent);
+          background: var(--accent-dim);
+          border: 1px solid var(--accent-border);
+          border-radius: 100px;
+          padding: 0.3rem 0.85rem;
+          width: fit-content;
+        }
+
+        .work-project-title {
+          font-family: 'DM Serif Display', serif;
+          font-size: clamp(1.5rem, 3vw, 2.2rem);
+          font-weight: 400;
+          line-height: 1.2;
+          margin: 0;
+        }
+
+        .work-desc {
+          font-size: 0.92rem;
+          color: var(--text-muted);
+          line-height: 1.7;
+          font-weight: 300;
+        }
+
+        /* Stack tags */
+        .work-stack {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
+        .work-tag {
+          font-size: 0.72rem;
+          font-weight: 500;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--text-dim);
+          background: var(--surface-2);
+          border: 1px solid var(--border);
+          border-radius: 6px;
+          padding: 0.3rem 0.7rem;
+          transition: color 0.2s, border-color 0.2s;
+        }
+
+        .work-tag:hover {
+          color: var(--accent);
+          border-color: var(--accent-border);
+        }
+
+        /* Divider */
+        .work-divider {
+          height: 1px;
+          background: var(--border);
+        }
+
+        /* Action buttons */
+        .work-actions {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .work-action-btn {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          background: var(--surface-2);
+          border: 1px solid var(--border);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--text-muted);
+          font-size: 1.1rem;
+          transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        .work-action-btn:hover {
+          color: var(--accent);
+          border-color: var(--accent-border);
+          background: var(--accent-dim);
+          transform: translateY(-2px);
+        }
+
+        .work-action-btn.disabled {
+          opacity: 0.3;
+          pointer-events: none;
+        }
+
+        /* ── Slider column ── */
+        .work-slider-col {
+          position: relative;
+          width: 100%;
+          min-width: 0;
+        }
+
+        .work-swiper {
+          width: 100%;
+        }
+
+        .work-slide-wrap {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 10;
+          border-radius: 14px;
+          overflow: hidden;
+          background: var(--surface-2);
+          border: 1px solid var(--border);
+        }
+
+        @media (max-width: 860px) {
+          .work-slide-wrap {
+            aspect-ratio: 16 / 9;
+          }
+        }
+
+        .work-slide-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(28,28,32,0.5) 0%, transparent 50%);
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        .work-slide-img {
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+
+        .work-slide-wrap:hover .work-slide-img {
+          transform: scale(1.03);
+        }
+
+        /* Counter badge */
+        .work-counter {
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+          z-index: 10;
+          font-size: 0.72rem;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          color: var(--text-muted);
+          background: rgba(28,28,32,0.7);
+          backdrop-filter: blur(8px);
+          border: 1px solid var(--border);
+          border-radius: 100px;
+          padding: 0.3rem 0.75rem;
+        }
+
+        .work-counter span { color: var(--accent); }
+      `}</style>
+
+      <motion.section
+        className="work-root"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.4, ease: "easeIn" } }}
+      >
+        <div className="work-inner">
+
+          {/* Header */}
+          <div className="work-header">
+            <p className="work-eyebrow">Portfolio</p>
+            <h1 className="work-title">
+              Selected <em>projects</em>
+            </h1>
+          </div>
+
+          <div className="work-grid">
+
+            {/* ── Info column ── */}
+            <div className="work-info-col">
+              <div className={`work-num ${imgLoaded ? "accent-stroke" : ""}`}>
                 {project.num}
               </div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category}{" "}
-              </h2>
-              <p className="text-white/60">{project.Description}</p>
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="border border-white/20"></div>
-              <div className="flex items-center gap-4">
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+
+              <div>
+                <span className="work-category">{project.category}</span>
+              </div>
+
+              <h2 className="work-project-title">{project.title}</h2>
+              <p className="work-desc">{project.description}</p>
+
+              <div className="work-stack">
+                {project.stack.map((item, i) => (
+                  <span key={i} className="work-tag">{item.name}</span>
+                ))}
+              </div>
+
+              <div className="work-divider" />
+
+              <div className="work-actions">
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link
+                        href={project.live || "#"}
+                        target="_blank"
+                        className={`work-action-btn${!project.live || project.live === "#" ? " disabled" : ""}`}
+                      >
+                        <BsArrowUpRight />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent><p>Live project</p></TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link
+                        href={project.github || "#"}
+                        target="_blank"
+                        className={`work-action-btn${!project.github || project.github === "#" ? " disabled" : ""}`}
+                      >
+                        <BsGithub />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent><p>GitHub repository</p></TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
             </div>
-          </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative flex group justify-center items-center bg-pink-50/20">
-                      <div className="absolute top-0 bottom-0 w-full bg-black/10 z-10"></div>
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-cover"
-                          alt=""
-                        />
-                      </div>
+
+            {/* ── Slider column ── */}
+            <div className="work-slider-col">
+              <Swiper
+                spaceBetween={0}
+                slidesPerView={1}
+                onSlideChange={handleSlideChange}
+                className="work-swiper"
+              >
+                {projects.map((p, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="work-slide-wrap">
+                      <div className="work-slide-overlay" />
+                      <Image
+                        src={p.image}
+                        fill
+                        className="work-slide-img"
+                        alt={p.title}
+                        onLoad={() => setImgLoaded(true)}
+                      />
                     </div>
                   </SwiperSlide>
-                );
-              })}
-              <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-              />
-            </Swiper>
+                ))}
+
+               
+                <div className="work-counter">
+                  <span>{projects.indexOf(project) + 1}</span>
+                  {" / "}
+                  {projects.length}
+                </div>
+
+                <WorkSliderBtns
+                  containerStyles="flex gap-2 absolute right-3 bottom-3 z-20"
+                  btnStyles="bg-[#e8c97e] hover:opacity-80 text-primary text-[18px] w-[38px] h-[38px] rounded-lg flex justify-center items-center transition-all"
+                />
+              </Swiper>
+            </div>
+
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.section>
+    </>
   );
 };
 

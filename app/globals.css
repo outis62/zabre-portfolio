@@ -22,6 +22,15 @@
     .text-outline-hover{
       -webkit-text-stroke: 1px #00ff99;
     }
+
+    .custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #e8c97e;
+  border-radius: 8px;
+}
     
   }
 
