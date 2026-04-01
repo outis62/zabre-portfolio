@@ -54,7 +54,7 @@ const MobileNav = () => {
             href="/password-generator/password"
             className="inline-block px-6 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors font-medium"
           >
-            Generator
+           Pass Generator
           </Link>
         </div>
       </SheetContent>
