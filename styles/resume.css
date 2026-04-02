@@ -1,0 +1,232 @@
+/* ─── STYLES : resume.css  */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+:root {
+  --r-accent:        #e8c97e;
+  --r-accent-dim:    rgba(232, 201, 126, 0.10);
+  --r-accent-border: rgba(232, 201, 126, 0.28);
+  --r-surface:       #1c1c20;
+  --r-surface-2:     #232328;
+  --r-surface-3:     #2a2a30;
+  --r-border:        rgba(255, 255, 255, 0.07);
+  --r-text:          #f0ede8;
+  --r-text-muted:    rgba(240, 237, 232, 0.45);
+  --r-text-dim:      rgba(240, 237, 232, 0.65);
+
+  --r-font-display: 'DM Serif Display', serif;
+  --r-font-body:    'DM Sans', sans-serif;
+  --r-radius:       8px;
+  --r-radius-lg:    12px;
+}
+
+.resume-root {
+  font-family: var(--r-font-body);
+  color:        var(--r-text);
+  background:   var(--r-surface);
+  min-height:   100vh;
+  padding:      4rem 1.5rem;
+}
+
+.resume-inner {
+  max-width:             1100px;
+  margin:                0 auto;
+  display:               grid;
+  grid-template-columns: 220px 1fr;
+  gap:                   3.5rem;
+  align-items:           start;
+}
+
+@media (max-width: 860px) {
+  .resume-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.tab-nav {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.35rem;
+  position:       sticky;
+  top:            2rem;
+}
+
+@media (max-width: 860px) {
+  .tab-nav { flex-direction: row; flex-wrap: wrap; position: static; }
+}
+
+.tab-btn {
+  display:        flex;
+  align-items:    center;
+  gap:            0.75rem;
+  padding:        0.75rem 1rem;
+  border-radius:  var(--r-radius);
+  border:         none;
+  background:     transparent;
+  color:          var(--r-text-muted);
+  font-family:    var(--r-font-body);
+  font-size:      0.85rem;
+  font-weight:    500;
+  letter-spacing: 0.04em;
+  cursor:         pointer;
+  transition:     color 0.2s, background 0.2s;
+  text-align:     left;
+  white-space:    nowrap;
+}
+
+.tab-btn:hover      { color: var(--r-text); background: var(--r-surface-2); }
+.tab-btn.active     { color: var(--r-accent); background: var(--r-accent-dim); }
+
+.tab-btn-indicator {
+  width:         3px;
+  height:        16px;
+  border-radius: 2px;
+  background:    var(--r-accent);
+  opacity:       0;
+  transition:    opacity 0.2s;
+  flex-shrink:   0;
+}
+
+.tab-btn.active .tab-btn-indicator { opacity: 1; }
+
+.panel-eyebrow {
+  font-size:      0.7rem;
+  font-weight:    500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          var(--r-accent);
+  margin-bottom:  0.5rem;
+}
+
+.panel-title {
+  font-family: var(--r-font-display);
+  font-size:   clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin:      0 0 0.75rem;
+}
+
+.panel-desc {
+  font-size:     0.92rem;
+  color:         var(--r-text-muted);
+  line-height:   1.7;
+  font-weight:   300;
+  max-width:     540px;
+  margin-bottom: 2rem;
+}
+
+.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+@media (max-width: 620px) { .cards-grid { grid-template-columns: 1fr; } }
+
+.resume-card {
+  background:     var(--r-surface-2);
+  border:         1px solid var(--r-border);
+  border-radius:  var(--r-radius-lg);
+  padding:        1.4rem 1.5rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            0.5rem;
+  transition:     border-color 0.2s, background 0.2s;
+}
+
+.resume-card:hover {
+  border-color: var(--r-accent-border);
+  background:   var(--r-surface-3);
+}
+
+.resume-card-duration {
+  font-size:      0.72rem;
+  font-weight:    500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:          var(--r-accent);
+}
+
+.resume-card-title {
+  font-size:   1rem;
+  font-weight: 500;
+  color:       var(--r-text);
+  line-height: 1.4;
+  margin:      0;
+  min-height:  2.8rem;
+}
+
+.resume-card-sub {
+  display:     flex;
+  align-items: center;
+  gap:         0.5rem;
+  font-size:   0.85rem;
+  color:       var(--r-text-muted);
+  font-weight: 300;
+}
+
+.resume-card-dot {
+  width:         5px;
+  height:        5px;
+  border-radius: 50%;
+  background:    var(--r-accent);
+  flex-shrink:   0;
+}
+
+.skills-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap:                   0.75rem;
+}
+
+.skill-tile {
+  background:      var(--r-surface-2);
+  border:          1px solid var(--r-border);
+  border-radius:   10px;
+  height:          90px;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+  gap:             0.4rem;
+  font-size:       1.8rem;
+  color:           var(--r-text-muted);
+  transition:      color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+  cursor:          default;
+}
+
+.skill-tile:hover {
+  color:         var(--r-accent);
+  border-color:  var(--r-accent-border);
+  background:    var(--r-accent-dim);
+  transform:     translateY(-2px);
+}
+
+.skill-tile-name {
+  font-size:      0.6rem;
+  font-weight:    500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color:          var(--r-text-muted);
+  transition:     color 0.2s;
+}
+
+.skill-tile:hover .skill-tile-name { color: var(--r-accent); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+
+@media (max-width: 540px) { .about-grid { grid-template-columns: 1fr; } }
+
+.about-item {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.2rem;
+  padding:        1rem 0;
+  border-bottom:  1px solid var(--r-border);
+}
+
+.about-item:nth-last-child(-n+2) { border-bottom: none; }
+
+.about-field {
+  font-size:      0.7rem;
+  font-weight:    500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--r-text-muted);
+}
+
+.about-value { font-size: 0.95rem; color: var(--r-text-dim); font-weight: 300; }
