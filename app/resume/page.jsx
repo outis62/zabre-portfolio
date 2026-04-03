@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TABS, ABOUT, EXPERIENCE, EDUCATION, SKILLS, DEFAULT_TAB } from "/config/resume.config";
-import { TabNav, PanelHeader, TimelineCard, CardScrollGrid, SkillsGrid, AboutGrid } from "/components/Resume";
+import { TabNav, PanelHeader, TimelineCard, CardScrollGrid, SkillsGrid, AboutGrid } from "@/components/Resume";
 import "/styles/resume.css";
 
 const panelVariants = {

@@ -10,7 +10,7 @@ import {
   MessageArea,
   SubmitRow,
   InfoSidebar,
-} from "/components/form/Contact";
+} from "@/components/form/Contact";
 import "/styles/contact.css";
 
 const container = {
