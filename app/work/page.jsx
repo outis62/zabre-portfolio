@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { PROJECTS }        from "@/utils/projects.data";
-import { useProjectSlider } from "@/hooks/useProjectSlider";
 import { ProjectInfo, ProjectSlider } from "@/components/Work";
 import "@/styles/work.css";
+import { useProjectSlider } from "@/hooks/Useprojectslider";
 
 export default function Work() {
   const { index, imgReady, handleSlideChange, onImageLoad } =
