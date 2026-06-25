@@ -10,7 +10,7 @@ const links = [
   { name: "services", path: "/services" },
   { name: "resume", path: "/resume" },
   { name: "work", path: "/work" },
-  { name: "contact", path: "/contact" },
+  // { name: "contact", path: "/contact" },
 ];
 
 const MobileNav = () => {
@@ -54,7 +54,7 @@ const MobileNav = () => {
             href="/password-generator/password"
             className="inline-block px-6 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors font-medium"
           >
-           Pass Generator
+           Pass secure
           </Link>
         </div>
       </SheetContent>

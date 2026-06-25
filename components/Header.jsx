@@ -34,7 +34,7 @@ const Header = () => {
   text-white shadow-md
   transition-all duration-300
   hover:bg-white/10 hover:border-white/20 hover:scale-105">
-    Pass generator
+    Pass secure
   </Button>
 </Link>
 

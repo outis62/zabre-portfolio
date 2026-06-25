@@ -23,7 +23,7 @@ export const EXPERIENCE = {
   description:
     "Over 4 years of hands-on experience in web & mobile development, network systems engineering, and digital marketing.",
   items: [
-    { company: "Legrand Web Services", position: "Full Stack Developer",                 duration: "2024 – Present" },
+    { company: "Legrand Web Services", position: "Full Stack Developer Web/Mobile",                 duration: "13 May 2024 – Present day" },
     { company: "Switch Maker",         position: "Web Developer Intern",                 duration: "Nov 2023 – Feb 2024" },
     { company: "Simplon Burkina Faso", position: "Full Stack Developer Certification",   duration: "Feb 2023 – Nov 2023" },
     { company: "Genyx Group",          position: "Web Designer",                         duration: "2021 – 2022" },
@@ -60,11 +60,11 @@ export const SKILLS = {
     { iconKey: "laravel",    name: "Laravel" },
     { iconKey: "livewire",   name: "Livewire" },
     { iconKey: "python",     name: "Python" },
-    { iconKey: "django",     name: "Django" },
+    // { iconKey: "django",     name: "Django" },
     { iconKey: "mysql",      name: "MySQL" },
     { iconKey: "wordpress",  name: "WordPress" },
-    { iconKey: "joomla",     name: "Joomla" },
-    { iconKey: "drupal",     name: "Drupal" },
+    { iconKey: "react",     name: "React native" },
+    // { iconKey: "drupal",     name: "Drupal" },
   ],
 };
 
