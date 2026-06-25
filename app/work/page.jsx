@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PROJECTS }        from "/utils/projects.data";
-import { useProjectSlider } from "/hooks/useProjectSlider";
+import { PROJECTS }        from "@/utils/projects.data";
+import { useProjectSlider } from "@/hooks/useProjectSlider";
 import { ProjectInfo, ProjectSlider } from "@/components/Work";
-import "/styles/work.css";
+import "@/styles/work.css";
 
 export default function Work() {
   const { index, imgReady, handleSlideChange, onImageLoad } =
