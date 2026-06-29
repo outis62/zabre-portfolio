@@ -2,7 +2,7 @@ export const HERO = {
   role:        "Software Developer",
   name:        "BOUREIMA ZABRE",
   tagline:     "I excel at crafting elegant digital experiences and I'm proficient in various programming languages and technologies.",
-  cvUrl:       "https://mega.nz/file/1MlG3bpT#w5rc-HrqtHIrXSZ84E185VwuB3AWfXo515DBZt6t6vE",
+  cvUrl:       "https://mega.nz/file/9EFiRATI#ZRyrVeltxJgh-x9Mdcp1S79-kP6vEwYkpCQUH4_WYzA",
 };
 
 export const STYLES = {
